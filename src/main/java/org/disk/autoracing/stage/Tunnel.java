@@ -8,7 +8,7 @@ public class Tunnel extends Stage {
     Semaphore smp = new Semaphore(5) ;
     public Tunnel(int length) {
         this.length = length;
-        this.description = ("Tunnel " + length + "metres");
+        this.description = ("Tunnel " + length + " metres");
     }
 
 
@@ -22,7 +22,7 @@ public class Tunnel extends Stage {
         } catch (InterruptedException e) {
             e.printStackTrace();
         } finally {
-            System.out.println(car.getName() + " completed the stage: " + description);
+            System.err.println(car.getName() + " completed the stage: " + description);
             smp.release();
 
         }
